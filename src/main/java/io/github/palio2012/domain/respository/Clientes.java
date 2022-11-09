@@ -1,4 +1,4 @@
-package io.github.palio2012.domain.respositorios;
+package io.github.palio2012.domain.respository;
 
 
 import io.github.palio2012.domain.entities.Cliente;

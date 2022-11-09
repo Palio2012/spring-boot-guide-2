@@ -2,7 +2,7 @@ package io.github.palio2012;
 
 
 import io.github.palio2012.domain.entities.Cliente;
-import io.github.palio2012.domain.respositorios.Clientes;
+import io.github.palio2012.domain.respository.Clientes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
