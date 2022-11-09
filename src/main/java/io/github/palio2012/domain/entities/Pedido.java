@@ -3,6 +3,7 @@ package io.github.palio2012.domain.entities;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table (name = "pedido")
@@ -21,6 +22,9 @@ public class Pedido {
 
     @Column (name = "total", length = 20, precision = 2)
     private BigDecimal total;
+
+    @OneToMany (mappedBy = "pedido")
+    private List <ItemPedido> itens;
 
     public Integer getId() {
         return id;
@@ -52,5 +56,13 @@ public class Pedido {
 
     public void setTotal(BigDecimal total) {
         this.total = total;
+    }
+
+    public List<ItemPedido> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<ItemPedido> itens) {
+        this.itens = itens;
     }
 }
