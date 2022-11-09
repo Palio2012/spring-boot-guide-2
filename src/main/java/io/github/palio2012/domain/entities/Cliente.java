@@ -15,7 +15,7 @@ public class Cliente {
     @Column (name = "nome", length = 100)
     private String nome;
 
-    @OneToMany (mappedBy = "cliente")
+    @OneToMany (mappedBy = "cliente", fetch = FetchType.LAZY)
     private Set<Pedido> pedidos;
 
     public Cliente() {
@@ -44,6 +44,14 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Set<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Set<Pedido> pedidos) {
+        this.pedidos = pedidos;
     }
 
     @Override
